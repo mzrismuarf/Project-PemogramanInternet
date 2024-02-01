@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bento');
+@import url('https://fonts.cdnfonts.com/css/nuku-nuku');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.MizarIsmuArief_container {
+    background-color: #fff;
+    /* padding: 20px; */
+    height: 94%;
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.MizarIsmuArief_img-container {
+    margin: 0;
+    padding: 0;
+}
+
+.MizarIsmuArief_img-container .MizarIsmuArief_img {
+    float: left;
+    /* margin: 50px; */
+}
+
+.MizarIsmuArief_img-container img {
+    width: 45.1%;
+    height: 93%;
+    /* float: left; */
+    margin-left: 1%;
+    /* margin-top: 2%; */
+    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.1);
+    /* border-bottom-left-radius: 90px; */
+    border-radius: 50px;
+}
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    /* font-family: 'BENTO', sans-serif; */
+    font-family: 'Nuku Nuku', sans-serif;
+    font-size: 3rem;
+}
+
+p {
+    float: right;
+    position: relative;
+    right: 14%;
+    margin-top: 0%;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.MizarIsmuArief_container form {
+    margin: 0px;
+    /* background-color: blue; */
+    float: right;
+    margin-right: 29%;
+    /* margin-right: 270px; */
+}
+
+.MizarIsmuArief_container input {
+    padding: 20px;
+    /* background-color: aqua; */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 200%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* float: right; */
+}
+
+.MizarIsmuArief_container input:hover {
+    border: none;
+    border-bottom: 1px solid #EC3030;
+
+}
+
+.MizarIsmuArief_container textarea {
+    border-radius: 5px;
+    padding: 20px;
+    /* background-color: aqua; */
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 200%;
+    margin-bottom: 10px;
+}
+
+.MizarIsmuArief_container textarea:hover {
+    border-bottom: 1px solid #EC3030;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFFEFB;
+    border: 0.1px solid #EC3030;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* background-color: #EC3030; */
+    color: #EC3030;
+    cursor: pointer;
+    /* float: right; */
+    position: relative;
+    left: 170%;
+}
+
+button:hover {
+    color: #FFFEFB;
+    background-color: #EC3030;
+}
+
+
+#MizarIsmuArief_popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+#MizarIsmuArief_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.MizarIsmuArief_popup-content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#MizarIsmuArief_popupText {
+    margin-left: 120px;
+}
+
+/* .MizarIsmuArief_popupText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.MizarIsmuArief_close-btn {
+    cursor: pointer;
+    /* color: #007bff; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4D4D4D;
+}
+
+
+a {
+    position: relative;
+    float: right;
+    left: 31%;
+    bottom: 19%;
+    color: #EC3030;
+    border-radius: 10px;
+    padding: 8px;
+    /* box-shadow: 0px 10px 26px -4px rgba(0, 0, 0, 0.1); */
+    font-size: 1.5rem;
+}
+
+a:hover {
+    box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.1);
+    /* border-bottom: 1px solid #EC3030; */
+}
+
+.MizarIsmuArief_close-btn:hover {
+    color: #EC3030;
+}
+
+@media (max-width: 768px) {
+    .MizarIsmuArief_container {
+        max-width: 100%;
+    }
+}

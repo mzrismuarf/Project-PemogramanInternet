@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    transition: all 0.9s;
+}
+
+.card:hover {
+    transform: scale(1.15);
+}
+
+.card-body-team h5 {
+    font-size: 1rem;
+}
+
+.card-body-team p {
+    font-size: 0.7rem;
+}
+
+.row-team {
+    justify-content: center;
+}
+
+
+.team {
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    border: none;
+    width: 20rem;
+}
+
+.team img {
+    width: 10rem;
+}
+
+.btn {
+    border: none;
+    background: linear-gradient(90deg, hsla(165, 86%, 33%, 1) 0%, hsla(165, 89%, 31%, 1) 100%);
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, hsla(165, 89%, 31%, 1) 0%, hsla(165, 86%, 33%, 1) 100%);
+    color: white;
+}
+
+
+.footer-container {
+    margin-top: 50px;
+}
+
+.footer-contact a {
+    font-size: 24px;
+    color: white;
+    margin: 10px;
+}
+
+
+/* .container-footer-title {
+    background-color: #4D4D4D;
+} */
+
+/* .text-footer-gradient {
+    font-size: 72px;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
+
+.footer-background {
+    /* background-color: #0C9A76; */
+    /* background: linear-gradient(90deg, hsla(165, 89%, 31%, 1) 0%, hsla(165, 86%, 33%, 1) 100%); */
+    background-color: #4D4D4D;
+}
+
+.text-footer {
+    /* color: #FFFEFB; */
+    color: #0C9A76;
+    /* border-bottom: 1px solid #0C9A76; */
+}

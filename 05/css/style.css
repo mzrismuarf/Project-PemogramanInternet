@@ -1,0 +1,257 @@
+       /* soal no 9
+        menambahkan kode css agar lebih menarik
+        */
+       * {
+           @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Open+Sans:wght@400;500;700&family=VT323&display=swap');
+           font-family: 'Roboto', sans-serif;
+       }
+
+       .container {
+           margin: auto;
+           width: 100%;
+           min-width: 200px;
+       }
+
+       .container-header {
+           width: 100%;
+           padding-bottom: 1.5vw;
+           text-align: center;
+           color: white;
+           background-color: #006a4e;
+       }
+
+       .container-header h1 {
+           /* font-size: 1.7vw; */
+           font-size: 1.2em;
+       }
+
+       .container-menu {
+           display: flex;
+           justify-content: center;
+           gap: 5vw;
+           padding: 10px 0;
+           margin-top: 10px;
+           margin-bottom: 20px;
+       }
+
+       .container-menu a:link {
+           text-decoration: none;
+       }
+
+       li {
+           display: inline;
+       }
+
+       /* soal dari no 6, menggunakan salah satu teknik CSS Layout GRID */
+       .container-main {
+           display: grid;
+           /* grid-template-columns: 45vw 47vw; */
+           grid-template-columns: 41vw 51vw;
+           padding-left: 30px;
+       }
+
+       /* ---------------------------------------- */
+       /* soal dari no 6 */
+       /* menggunakan salah satu teknik CSS Layout yaitu GRID
+        namun disini saya pasang pada container-main.
+        agar di bungkus container-main bisa 1 grid dengan sidebar & content
+        */
+       .sidebar {
+           width: 300px;
+       }
+
+       .sidebar img {
+           display: grid;
+           margin-top: 10px;
+           width: 39vw;
+           border-radius: 20px;
+       }
+
+       .sidebar marquee {
+           font-size: 1.3vw;
+           font-family: 'Kalam', cursive;
+           margin-top: 30px;
+           margin-bottom: 30px;
+       }
+
+       /* ---------------------------------------- */
+
+       /* soal dari no 8.
+        menambahkan kode CSS dari soal untuk menambahkan logo unper
+        */
+       .content {
+           background-image: url(../img/logounper.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-color: rgb(97, 97, 97);
+           color: white;
+
+           /* menambah 1 kode untuk styling bordernya */
+           border-radius: 10px;
+       }
+
+       .content-text {
+           padding-top: 1vw;
+           height: 98%;
+           background-color: rgb(2, 2, 2);
+           border-radius: 10px;
+           opacity: 0.9;
+       }
+
+       .content:hover {
+           opacity: 0.9;
+       }
+
+       .content h1 {
+           font-size: 1.5vw;
+           text-align: center;
+       }
+
+       .content p {
+           padding: 10px 25px;
+           font-size: 1.5vw;
+           text-align: justify;
+       }
+
+       .container-footer {
+           /* width: 100%; */
+           margin-top: 15px;
+           padding: 2vw;
+           color: white;
+           background-color: #006a4e;
+       }
+
+       .container footer {
+           font-size: 1em;
+           text-align: center;
+           font-family: 'VT323', monospace;
+       }
+
+
+       /* styling agar responsif di beberapa device */
+
+       @media (max-width: 576px) {
+           .container-main {
+               display: flex;
+               flex-wrap: wrap;
+               padding-left: 20px;
+           }
+
+           .sidebar img {
+               margin-top: 10px;
+               width: 129px;
+               margin-bottom: 10px;
+           }
+
+           .sidebar marquee {
+               font-size: 20px;
+               margin-top: 30px;
+               margin-bottom: 30px;
+           }
+
+           .content {
+               height: 590px;
+           }
+
+           .content-text {
+               padding-top: 20px;
+               height: 570px;
+               opacity: 0.9;
+           }
+
+           .content h1 {
+               padding-left: 10px;
+               font-size: 25px;
+           }
+
+           .content p {
+               padding: 10px 25px;
+               font-size: 15px;
+           }
+
+       }
+
+
+       @media (max-width: 600px) {
+           .container-main {
+               display: flex;
+               flex-wrap: wrap;
+               padding-left: 20px;
+           }
+
+           .sidebar img {
+               margin-top: 10px;
+               width: 529px;
+               margin-bottom: 10px;
+           }
+
+           .sidebar marquee {
+               font-size: 20px;
+               margin-top: 30px;
+               margin-bottom: 30px;
+           }
+
+           .content {
+               height: 590px;
+           }
+
+           .content-text {
+               padding-top: 20px;
+               height: 570px;
+               opacity: 0.9;
+           }
+
+           .content h1 {
+               padding-left: 10px;
+               font-size: 25px;
+           }
+
+           .content p {
+               padding: 10px 25px;
+               font-size: 15px;
+           }
+
+       }
+
+       @media (max-width: 768px) {
+           .sidebar marquee {
+               font-size: 20px;
+               margin-top: 30px;
+               width: 100%;
+               margin-bottom: 30px;
+           }
+
+           .content-text {
+               padding-top: 20px;
+           }
+
+           .content-text h1 {
+               font-size: 15px;
+           }
+
+           .content-text p {
+               font-size: 15px;
+           }
+       }
+
+       @media (max-width: 992px) {
+           .sidebar marquee {
+               font-size: 25px;
+               width: 120%;
+               height: 35px;
+           }
+
+           .content-text {
+               height: 95%;
+               padding-top: 30px;
+           }
+
+           .content-text h1 {
+               font-size: 18px;
+           }
+
+           .content-text p {
+               font-size: 18px;
+           }
+
+       }

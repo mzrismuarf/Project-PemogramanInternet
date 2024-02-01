@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bento');
+@import url('https://fonts.cdnfonts.com/css/nuku-nuku');
+
+
+.MizarIsmuArief_container-menu {
+    margin: 0;
+    padding: 0;
+    /* justify-content: center; */
+    /* padding: 50px;
+    gap: 50px; */
+    /* padding: 5.5vw; */
+    gap: 50px;
+    /* background-color: aqua; */
+    /* background-color: aqua; */
+}
+
+.MizarIsmuArief_container-menu-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 5.5vw;
+    gap: 50px;
+    /* background-color: blue; */
+}
+
+.MizarIsmuArief_box {
+    width: 23vw;
+    /* background-color: aqua; */
+    height: 33vw;
+    /* background-color: rgb(142, 228, 153); */
+}
+
+.MizarIsmuArief_category-menu {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.MizarIsmuArief_title-category h1 {
+    text-align: center;
+    /* font-family: 'BENTO', sans-serif; */
+    font-family: 'Nuku Nuku', sans-serif;
+    font-size: 4rem;
+}

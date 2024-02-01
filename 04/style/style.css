@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 390px;
+    margin: auto;
+}
+
+/* 1 */
+.row1 {
+    background-color: #f7f7f7;
+}
+
+.box1 {
+    border: 1px solid #f7f7f7;
+    height: 250px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.box1 h1 {
+    font-size: 140%;
+    margin-left: 190px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+.box1 p {
+
+    font-size: 80%;
+    margin-left: 180px;
+}
+
+.img-box1 {
+
+    width: 60%;
+    margin-top: 60px;
+    float: left;
+}
+
+
+
+/* 2 */
+.row2 {
+    background-color: #f7f7f7;
+}
+
+.box2 {
+    width: 175px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/* 3 */
+
+.row3 {
+    box-sizing: border-box;
+    width: 370px;
+    margin-left: 10px;
+    background-color: #f5f5f5
+}
+
+.slideshow-container {
+    max-width: 5000px;
+    position: relative;
+    margin-top: 350px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev {
+
+    cursor: pointer;
+    background-color: #c4c4c4;
+    padding: 8px 16px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 9.9%;
+    margin-right: 70px;
+    font-weight: bold;
+}
+
+.next {
+    cursor: pointer;
+    background-color: #c4c4c4;
+    padding: 8px 16px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.text-box-slide {
+    position: absolute;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+.imgSlide {
+    margin-top: 75px;
+    margin-left: 90px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* 4 */
+.row4 {
+    background-color: #252734;
+}
+
+.row4 h1 {
+    margin-top: 20px;
+    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box4 {
+    color: white;
+    font-size: 13px;
+}
+
+.list {
+    padding-left: 0px;
+    float: left;
+    padding-top: 20px;
+}
+
+.container-img-box4 {
+    border-radius: 10%;
+    width: 45%;
+    padding-left: 10px;
+    padding-right: 15px;
+    position: relative;
+    left: 50px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* end 4 */
+
+.text1 {
+    text-align: center;
+    margin: auto;
+}
+
+.text1 h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* button */
+
+.button-buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: #06ad5c;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 9px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

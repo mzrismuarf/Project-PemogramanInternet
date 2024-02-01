@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- script.js -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- light-slider.css untuk card menu -->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!-- Jquery -->
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <!-- lightsliders.js -->
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <style>
+        /* Add your styles for the cart here */
+        #cart {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            overflow-y: auto;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        #cart.active {
+            right: 0;
+        }
+
+        #cart img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            color: rgb(0, 255, 89);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div id="cart">
+                <!-- Cart content will be dynamically added here using JavaScript -->
+                <div id="cart-items"></div>
+                <button id="checkout-btn" onclick="redirectToOrderPage()">Checkout</button>
+            </div>
+            <div class="title-category" id="lunch-menu">
+                <h1>Lunch menu</h1>
+            </div>
+            <div class="container-menu">
+                <div class="container-menu-box">
+                    <div class="box" id="item1">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/SushiComboA/4.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" id="buynow" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Sushi Combo A</a>
+                                <p>8 nigiri and 1 maki roll</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 23.00</a>
+                        </div>
+                    </div>
+                    <div class="box" id="item2">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/BentoBox/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" id="buynow" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Bento Box</a>
+                                <p>Assorted sushi, sashimi, tempura, and miso soup</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 24.500</a>
+                        </div>
+                    </div>
+                    <div class="box" id="item3">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/TeriyakiChickenDonburi/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" id="buynow" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Teriyaki Chicken Donburi</a>
+                                <p>Grilled teriyaki chicken served over a bowl of sushi rice</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 25.000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buyNowButtons = document.querySelectorAll('.overlay-buy-btn');
+        const cart = document.getElementById('cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+
+        buyNowButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                // ... (kode sebelumnya)
+                event.preventDefault();
+
+                const parentBox = event.target.closest('.box');
+                const imgSrc = parentBox.querySelector('.slide-img img').src;
+                const title = parentBox.querySelector('.type a').innerText;
+                const existingCartItem = getCartItemByTitle(title);
+
+                if (existingCartItem) {
+                    // Jika item sudah ada di keranjang, tampilkan prompt untuk input qty tambahan
+                    const inputQty = prompt(`Item "${title}" sudah ada di keranjang. Masukkan jumlah tambahan:`);
+                    const qty = inputQty ? parseInt(inputQty) : 0;
+
+                    if (qty > 0) {
+                        updateCartItemQty(existingCartItem, qty);
+                    }
+                } else {
+                    // Jika item belum ada di keranjang, tampilkan prompt untuk input qty
+                    const inputQty = prompt(`Masukkan jumlah item "${title}":`);
+                    const qty = inputQty ? parseInt(inputQty) : 0;
+
+                    if (qty > 0) {
+                        addToCart(imgSrc, title, qty);
+                    }
+                }
+            });
+        });
+
+        // ... (fungsi-fungsi sebelumnya)
+
+        function getCartItemByTitle(title) {
+            const cartItems = document.querySelectorAll('.cart-item');
+            for (const cartItem of cartItems) {
+                if (cartItem.querySelector('p').innerText === title) {
+                    return cartItem;
+                }
+            }
+            return null;
+        }
+
+        function addToCart(imgSrc, title, qty) {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+
+            cartItem.innerHTML = `
+            <img src="${imgSrc}" alt="${title}">
+            <p>${title}</p>
+            <p class="qty">Qty: ${qty}</p>
+            <span class="edit-btn" onclick="editCartItem(this)">Edit</span>
+            <span class="delete-btn" onclick="removeCartItem(this)">Delete</span>
+        `;
+            cartItem.dataset.qty = qty; // tambahkan data attribute untuk menyimpan qty
+
+            cartItemsContainer.appendChild(cartItem);
+            cart.classList.add('active');
+        }
+
+        function updateCartItemQty(cartItem, qty) {
+            const qtyElement = cartItem.querySelector('.qty');
+            qtyElement.innerText = `Qty: ${qty}`;
+            cart.classList.add('active');
+        }
+
+        window.editCartItem = function (editBtn) {
+            const cartItem = editBtn.closest('.cart-item');
+            const title = cartItem.querySelector('p').innerText;
+            const inputQty = prompt(`Edit jumlah item "${title}":`, cartItem.dataset.qty);
+            const qty = inputQty ? parseInt(inputQty) : parseInt(cartItem.dataset.qty);
+
+            if (qty > 0) {
+                updateCartItemQty(cartItem, qty);
+            } else {
+                removeCartItem(cartItem);
+            }
+        };
+
+        window.removeCartItem = function (deleteBtn) {
+            const cartItem = deleteBtn.closest('.cart-item');
+            cartItem.remove();
+
+            const cartItems = document.querySelectorAll('.cart-item');
+            if (cartItems.length === 0) {
+                cart.classList.remove('active');
+            }
+        };
+
+        window.redirectToOrderPage = function () {
+            const cartItems = document.querySelectorAll('.cart-item');
+            const orderData = [];
+
+            cartItems.forEach(function (cartItem) {
+                const title = cartItem.querySelector('p').innerText;
+                const qty = parseInt(cartItem.dataset.qty);
+
+                orderData.push({ title, qty });
+            });
+
+            localStorage.setItem('orderData', JSON.stringify(orderData));
+            window.location.href = 'order.html';
+        };
+
+        // ... (fungsi-fungsi lainnya)
+    });
+</script>
+
+</html>

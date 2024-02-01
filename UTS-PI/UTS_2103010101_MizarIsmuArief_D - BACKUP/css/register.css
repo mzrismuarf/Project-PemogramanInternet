@@ -1,0 +1,140 @@
+.MizarIsmuArief_container-login-page {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    /* background-color: cyan; */
+}
+
+.MizarIsmuArief_container-login-page svg {
+    position: absolute;
+    width: 120px;
+    right: 120px;
+}
+
+.MizarIsmuArief_background-login-page {
+    display: flex;
+    padding: 10vw;
+    height: 30vw;
+    /* background-color: blue; */
+}
+
+.MizarIsmuArief_background-form {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    height: 35vw;
+    width: 80%;
+    gap: 80px;
+    /* border: 1px solid #4D4D4D; */
+    /* width: 70vw; */
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px 0px rgba(128, 125, 125, 0.4);
+    /* background-color: #FFE53B; */
+    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    /* background-color: rgba(250,247,240,255); */
+
+    background-color: #FFFEFB;
+
+    /* background-color: #f0f5f9; */
+}
+
+.MizarIsmuArief_title-login-page {
+    text-align: center;
+}
+
+.MizarIsmuArief_title-login-page h1 {
+    font-size: 2rem;
+}
+
+.MizarIsmuArief_title-login-page p {
+    font-size: 0.8rem;
+}
+
+.MizarIsmuArief_form-login {
+    /* padding: 5vw 15vw; */
+    /* padding: 5vw 1vw;
+    padding-right: 20vw; */
+    /* float: right; */
+    /* height: 100%;
+    width: 100%; */
+
+    /* background-color: rgb(17, 77, 77); */
+    /* float: right; */
+    /* background-color: bisque; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.MizarIsmuArief_form-login form {
+    /* display: grid; */
+    padding-top: 10px;
+}
+
+
+.MizarIsmuArief_form-login input {
+    height: 3vw;
+    width: 16vw;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px;
+    border-bottom: 1px solid black;
+    /* border: 1px solid #4D4D4D; */
+
+}
+
+
+.MizarIsmuArief_container-form-login a {
+    color: #4D4D4D;
+    font-size: 12px;
+    float: left;
+    padding: 10px 5px 30px;
+}
+
+.MizarIsmuArief_container-form-login a:hover {
+    color: #EC3030;
+}
+
+
+.MizarIsmuArief_container-form-login button {
+    /* background-color: blue; */
+    position: relative;
+    float: right;
+    width: 10vw;
+    height: 3.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #EC3030;
+    /* border: 1px solid #4D4D4D; */
+
+    /* border: 1px solid #EC3030; */
+}
+
+.MizarIsmuArief_container-form-login button:hover {
+    background-color: #EC3030;
+    color: #FFFEFB;
+}
+
+.MizarIsmuArief_image-page-login {
+    margin: 0px;
+    /* width: 35%; */
+    width: 30%;
+    height: 60%;
+    padding-left: 10px;
+    float: left;
+    border-radius: 5px;
+    background-color: #FFFEFB;
+    /* background-color: #f0f5f9; */
+
+    /* background-color: blueviolet; */
+}
+
+.MizarIsmuArief_image-page-login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* background-color: #EC3030; */
+}

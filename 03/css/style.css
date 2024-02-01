@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+.konten{
+    border-radius: 17px;
+    margin-left: 70px;
+}
+.live-chat{
+    border-radius: 17px;
+}
+p {
+    margin-left: 80px;
+    font-weight: 700;
+}
+.iconprofile{
+    border-radius: 30px;
+    order: -1;
+    margin-right: 10px;
+}
+
+.profile{
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+}
+.profile-content{
+    display: flex;
+    align-items: center;
+}
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+}
+.channel-name{
+    font-weight: 600;
+}
+.subscriber-info {
+    color: #606060;
+    margin-top: 5px;
+    font-size: 70%;
+    margin-right: 40px;
+    /* font-weight: 100; */
+    /* font-size: 15px; */
+    /* font-size: 1.2rem; */
+    /* line-height: 1.8rem; */
+    /* font-weight: 400; */
+}
+.button-container {
+    display: flex;
+    margin-top: 10px;
+    
+}
+.button-subscribe{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    width: 90px;
+    height: 39px;
+    margin-right: 0px;
+    margin-left: 20px;
+}
+button {
+    border: none;
+}
+.button-group {
+    /* margin-left: auto; */
+    margin-left: 600px;
+    display: flex;
+    align-items: center;
+}
+.button-etc{
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    width: 90px;
+    height: 39px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+.button-etc-like{
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    width: 140px;
+    height: 39px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+
+}
+.button-etc-like i{
+    margin-right: px;
+}
+.button-etc-like span{
+    margin-right: 5px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.button-etc-share{
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    width: 79px;
+    height: 39px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.button-etc-share i{
+    margin-right: 0px;
+}
+
+.button-etc-download{
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    width: 120px;
+    height: 39px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+
+.button-etc-download i {
+    margin-right: 0px;
+}
+
+.button-etc-more {
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    width: 49px;
+    height: 39px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.button-etc-more i {
+    margin-right: 0px;
+}
+
+.button-etc i{
+    margin-right: 10px;
+}
+/* header */
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    margin-left: 80px;
+}
+
+.icon-yt{
+    margin-left: 10px;
+}
+
+/* search ori */
+.search{
+    /* display: flex;
+    align-items: center;
+    flex: 0 1 685px;
+    margin-left: 40px; */
+    margin-left: 200px;
+} 
+
+.search form{
+    position: relative;
+}
+
+.search input{
+    border: 1px solid #ccc;
+    height: 10px;
+    width: 600px;
+    padding: 12px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.search .icon-search{
+    min-width: 50px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.search .icon-voice{
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    border-radius: 40px;
+}
+
+/* end search */
+
+.more{
+    margin-left: 175px;
+}
+
+.icon-signin{
+    display: flex;
+    align-content: center;
+    width: 100px;
+}

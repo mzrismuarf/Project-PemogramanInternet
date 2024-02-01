@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- script.js -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- light-slider.css untuk card menu -->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!-- Jquery -->
+    <script type="text/javascript" src="js/Jquery.js"></script>
+    <!-- lightsliders.js -->
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <style>
+        /* Add your styles for the cart here */
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #cart {
+            display: grid;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            top: 70px;
+            right: -300px;
+            width: 250px;
+            height: 50%;
+            /* background-color: #fff; */
+            background-color: #fffefe;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            transition: 0.3s;
+            overflow-y: auto;
+            /* overflow-y: scroll; */
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        #cart.active {
+            right: 0;
+        }
+
+        #cart img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+
+        .cart-item {
+            /* border-bottom: 1px solid #ccc; */
+            width: 180px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .delete-btn {
+            color: #4D4D4D;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            /* background-color: #EC3030;
+            color: #FFFEFB; */
+            color: #FFFEFB;
+            background-color: #4D4D4D;
+        }
+
+        .edit-btn {
+            color: #4D4D4D;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover {
+            color: #FFFEFB;
+            background-color: #4D4D4D;
+        }
+
+        span {
+
+            padding: 7px;
+        }
+
+        .delete-btn,
+        .edit-btn {
+            /* display: flex; */
+            border-radius: 15px;
+        }
+
+        #checkout-btn {
+
+            background-color: #FFFEFB;
+            color: #EC3030;
+            border-radius: 20px;
+            border: none;
+            /* border: 1px solid #EC3030; */
+        }
+
+        #checkout-btn:hover {
+            cursor: pointer;
+            background-color: #EC3030;
+            color: #FFFEFB;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="" width="100px">
+            <h1>Sushi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html" id="home">Home</a></li>
+                <li><a href="/menu.html">Menu</a>
+                    <ul class="dropdown">
+                        <li><a href="/menu.html#lunch-menu">Lunch Menu</a></li>
+                        <li><a href="/menu.html#dinner-menu">Dinner</a></li>
+                        <li><a href="/menu.html#breakfast-menu">Breakfast</a></li>
+                        <li><a href="/menu.html#catering-menu">Catering</a></li>
+                    </ul>
+                </li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="/aboutous.html">About Us</a></li>
+                <li><a href="#chart-btn">
+                        <div class="btn-slider">
+                            <!-- <i class="ri-shopping-cart-line">Cart</i> -->
+                            <button id="chart-btn" class=" btn-cart"><i class="ri-shopping-cart-line"></i> Cart</button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- <button id="checkout-btn" onclick="redirectToOrderPage()">Pesan Sekarang!</button> -->
+
+            <div id="cart">
+                <!-- Cart content will be dynamically added here using JavaScript -->
+                <div id="cart-items"></div>
+                <button id="checkout-btn" onclick="redirectToOrderPage()">Pesan Sekarang</button>
+            </div>
+            <div class="title-category" id="lunch-menu">
+                <h1>Lunch menu</h1>
+            </div>
+            <div class="container-menu">
+                <div class="container-menu-box">
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/SushiComboA/4.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Sushi Combo A</a>
+                                <p>8 nigiri and 1 maki roll</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 23.00</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/BentoBox/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Bento Box</a>
+                                <p>Assorted sushi, sashimi, tempura, and miso soup</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 24.500</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/TeriyakiChickenDonburi/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Teriyaki Chicken Donburi</a>
+                                <p>Grilled teriyaki chicken served over a bowl of sushi rice</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 25.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/SalmonLover'sRoll/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Salmon Lover's Rolll</a>
+                                <p>Fresh salmon, avocado, and cucumber roll topped with salmon sashimi</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 35.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Lunch/VegetarianSushiPlatter/3.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Vegetarian Sushi Platter</a>
+                                <p>Assorted vegetarian rolls and nigiri with soy-based dipping sauce</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 39.000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-category" id="dinner-menu">
+                <h1>Dinner menu</h1>
+            </div>
+            <div class="container-menu">
+                <div class="container-menu-box">
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Dinner/DragonRoll/2.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Dragon Roll</a>
+                                <p>Shrimp tempura roll topped with eel, avocado, and eel sauce</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 21.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Dinner/DeluxeSashimiPlatter/2.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="DeluxeSashimiPlatter" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#">Deluxe Sashimi Platter</a>
+                                <p>Premium selection of sashimi including tuna, yellowtail, and octopus</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 23.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Dinner/SpicyTunaTartare/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SpicyTunaTartare">Spicy Tuna Tartare</a>
+                                <p>Diced spicy tuna mixed with avocado, served with wonton crisps</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 25.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Dinner/SeafoodUdon/2.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SeafoodUdon">Seafood Udon</a>
+                                <p>Udon noodles in a savory broth with shrimp, scallops, and vegetables</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 25.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Dinner/Chef'sSpecialOmakase/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SpecialOmakase">Chef's Special Omakase</a>
+                                <p>Premium sushi and sashimi</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 35.000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breakfast Menu -->
+            <div class="title-category" id="breakfast-menu">
+                <h1>Breakfast Menu</h1>
+            </div>
+            <div class="container-menu">
+                <div class="container-menu-box">
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu//Breakfast/SushiBreakfastBowl/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SushiBreakfastBowl">Sushi Breakfast Bowl</a>
+                                <p>Sushi rice topped with smoked salmon, avocado, and a poached egg</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 18.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu//Breakfast/TamagoSushi/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#TamagoSushi">Tamago Sushi</a>
+                                <p>Sweet Japanese omelet on a bed of sushi rice, wrapped in seaweed</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 23.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu//Breakfast/MisoSoupandOnigiriCombo/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#MisoSoupandOnigiriCombo" style="font-size: 1.4vw;">Miso Soup and Onigiri
+                                    Combo</a>
+                                <p style="font-size: 1vw;">Traditional miso soup paired with two rice balls filled with
+                                    pickled plum and grilled
+                                    salmon</p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 27.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu//Breakfast/GreenTeaPancakes/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#GreenTeaPancakes">Green Tea Pancakes</a>
+                                <p>Fluffy pancakes infused with green tea, served with red bean paste and fresh fruit
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 30.000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cathering Menu -->
+            <div class="title-category" id="catering-menu">
+                <h1>Catering Menu</h1>
+            </div>
+            <div class="container-menu">
+                <div class="container-menu-box">
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Catering/SushiPlatter/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SushiPlatter">Sushi Platter</a>
+                                <p>Assorted sushi rolls including California rolls and spicy tuna rolls
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 22.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Catering/SashimiBoat/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SashimiBoat">Sashimi Boat</a>
+                                <p>A selection of fresh sashimi arranged on a decorative boat
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 24.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Catering/TempuraPartyPlatter/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#TempuraPartyPlatter">Tempura Party Platter</a>
+                                <p>Shrimp and vegetable tempura with dipping sauce
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 26.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Catering/SushiBurritos/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#SushiBurritos">Sushi Burritos</a>
+                                <p>Large sushi rolls filled with a variety of ingredients, perfect for a crowd
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 27.000</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!-- img box -->
+                        <div class="slide-img">
+                            <img src="/images/menu/Catering/DessertSushi/1.jpg" alt="">
+                            <!-- overlayer -->
+                            <div class="overlay">
+                                <a href="#" class="overlay-buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- rating -->
+                            <div class="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <!-- type-->
+                            <div class="type">
+                                <a href="#Dessert Sushi">Dessert Sushi</a>
+                                <p>Sweet sushi rolls with fruit, chocolate, and sweet rice
+                                </p>
+                            </div>
+                            <!-- price -->
+                            <a href="" class="price">Rp. 28.000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buyNowButtons = document.querySelectorAll('.overlay-buy-btn');
+        const cart = document.getElementById('cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const chartBtn = document.getElementById('chart-btn');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        let totalQty = 0;
+        let totalPrice = 0;
+
+        updateCheckoutButtonVisibility();
+        checkoutBtn.style.display = 'none';
+
+        chartBtn.addEventListener('click', function () {
+            cart.classList.toggle('active'); // Tambahkan ini
+        });
+
+
+
+        buyNowButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const parentBox = event.target.closest('.box');
+                const imgSrc = parentBox.querySelector('.slide-img img').src;
+                const title = parentBox.querySelector('.type a').innerText;
+                const existingCartItem = getCartItemByTitle(title);
+
+                if (existingCartItem) {
+                    const inputQty = prompt(`Item "${title}" sudah ada di keranjang. Masukkan jumlah tambahan:`);
+                    if (inputQty !== null) {
+                        const qty = parseInt(inputQty) || 0;
+                        if (qty > 0) {
+                            updateCartItemQty(existingCartItem, qty);
+                        }
+                    }
+                } else {
+                    const inputQty = prompt(`Masukkan jumlah item "${title}":`);
+                    if (inputQty !== null) {
+                        const qty = parseInt(inputQty) || 0;
+                        if (qty > 0) {
+                            const price = parseFloat(parentBox.querySelector('.price').innerText.replace('Rp. ', ''));
+                            addToCart(imgSrc, title, qty, price);
+                        }
+                    }
+                }
+            });
+        });
+
+
+        function getCartItemByTitle(title) {
+            const cartItems = document.querySelectorAll('.cart-item');
+            for (const cartItem of cartItems) {
+                if (cartItem.querySelector('p').innerText === title) {
+                    return cartItem;
+                }
+            }
+            return null;
+            updateCheckoutButtonVisibility();
+        }
+
+
+        function updateCheckoutButtonVisibility() {
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const cartItemsContainer = document.getElementById('cart-items');
+
+            const totalQty = cartItemsContainer.children.length;
+            console.log("Total Qty:", totalQty);
+
+            checkoutBtn.style.display = totalQty > 0 ? 'block' : 'none';
+        }
+
+
+
+
+        function addToCart(imgSrc, title, qty, price) {
+            console.log("Adding to cart:", title);
+            console.log("Total Qty:", totalQty);
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+
+            cartItem.innerHTML = `
+            <img src="${imgSrc}" alt="${title}">
+            <p>${title}</p>
+            <p class="qty">${qty}</p>
+            <p class="price">Rp. ${(qty * price).toFixed(2)}</p>
+            <span class="edit-btn" onclick="editCartItem(this)">Edit</span>
+            <span class="delete-btn" onclick="removeCartItem(this)">Delete</span>
+        `;
+            cartItem.dataset.qty = qty;
+            cartItem.dataset.price = price;
+
+            cartItemsContainer.appendChild(cartItem);
+            cart.classList.add('active');
+
+            updateCheckoutButtonVisibility();
+
+            totalQty += qty;
+            totalPrice += qty * price;
+            updateCartTotal();
+
+
+
+            console.log("Number of items in cart:", cartItemsContainer.children.length);
+        }
+
+        function updateCartTotal() {
+            const cartTotal = document.getElementById('cart-total');
+            cartTotal.innerHTML = `Total Qty: ${totalQty}<br>Total Price: Rp. ${totalPrice.toFixed(2)}`;
+            // updateCheckoutButtonVisibility();
+        }
+
+        // ... (fungsi-fungsi lainnya)
+
+        function updateCartItemQty(cartItem, qty) {
+            const qtyElement = cartItem.querySelector('.qty');
+            qtyElement.innerText = `Qty: ${qty}`;
+            const price = parseFloat(cartItem.dataset.price);
+            cartItem.querySelector('.price').innerText = `Price: Rp. ${(qty * price).toFixed(2)}`;
+            cart.classList.add('active');
+
+            totalQty += qty - parseInt(cartItem.dataset.qty);
+            totalPrice += (qty - parseInt(cartItem.dataset.qty)) * price;
+            updateCartTotal();
+            cartItem.dataset.qty = qty;
+            // updateCheckoutButtonVisibility();
+        }
+
+        // ... (fungsi-fungsi lainnya)
+        function updateCartItemQty(cartItem, qty) {
+            const qtyElement = cartItem.querySelector('.qty');
+            qtyElement.innerText = `Qty: ${qty}`;
+
+            const price = parseFloat(cartItem.dataset.price);
+            const totalPriceForItem = qty * price;
+            cartItem.querySelector('.price').innerText = `Price: Rp. ${totalPriceForItem.toFixed(2)}`;
+            cart.classList.add('active');
+
+            // Menghitung total qty dan total price secara keseluruhan
+            totalQty = 0;
+            totalPrice = 0;
+
+            const cartItems = document.querySelectorAll('.cart-item');
+            cartItems.forEach(function (item) {
+                const itemQty = parseInt(item.dataset.qty);
+                totalQty += itemQty;
+                totalPrice += itemQty * parseFloat(item.dataset.price);
+            });
+
+            updateCartTotal();
+
+            cartItem.dataset.qty = qty;
+        }
+
+        window.editCartItem = function (editBtn) {
+            const cartItem = editBtn.closest('.cart-item');
+            const title = cartItem.querySelector('p').innerText;
+            const inputQty = prompt(`Edit jumlah item "${title}":`, cartItem.dataset.qty);
+            const qty = inputQty ? parseInt(inputQty) : parseInt(cartItem.dataset.qty);
+
+            if (qty > 0) {
+                updateCartItemQty(cartItem, qty);
+            } else {
+                removeCartItem(cartItem);
+            }
+
+            // updateCheckoutButtonVisibility();
+        };
+
+
+        window.removeCartItem = function (deleteBtn) {
+            const cartItem = deleteBtn.closest('.cart-item');
+            cartItem.remove();
+
+            const cartItems = document.querySelectorAll('.cart-item');
+            if (cartItems.length === 0) {
+                cart.classList.remove('active');
+            }
+            updateCheckoutButtonVisibility(); // Memanggil fungsi setelah menghapus item
+        };
+
+        window.redirectToOrderPage = function () {
+            const orderData = [];
+
+            const cartItems = document.querySelectorAll('.cart-item');
+            cartItems.forEach(function (cartItem) {
+                const title = cartItem.querySelector('p').innerText;
+                const qty = parseInt(cartItem.dataset.qty);
+                const price = parseFloat(cartItem.dataset.price);
+
+                orderData.push({ title, qty, price });
+            });
+
+            // updateCheckoutButtonVisibility();
+
+            localStorage.setItem('orderData', JSON.stringify(orderData));
+            localStorage.setItem('orderTotalQty', totalQty);
+            localStorage.setItem('orderTotalPrice', totalPrice.toFixed(2));
+            window.location.href = 'order.html';
+        };
+
+        // minimaze
+
+        // end
+    });
+</script>
+
+</html>

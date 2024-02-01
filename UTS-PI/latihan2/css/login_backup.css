@@ -1,0 +1,100 @@
+.container-login-page {
+    padding: 0px;
+    margin: 0px;
+    /* background-color: cyan; */
+}
+
+
+.background-login-page {
+    display: flex;
+    padding: 10vw;
+    height: 30vw;
+    /* background-color: blue; */
+}
+
+.background-form {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    height: 35vw;
+    width: 80%;
+    gap: 80px;
+    /* width: 70vw; */
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px 0px rgba(128, 125, 125, 0.4);
+    /* background-color: #FFE53B; */
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.title-login-page {
+    text-align: center;
+}
+
+.title-login-page h1 {
+    font-size: 2rem;
+}
+
+.title-login-page p {
+    font-size: 0.8rem;
+}
+
+.form-login {
+    /* padding: 5vw 15vw; */
+    /* padding: 5vw 1vw;
+    padding-right: 20vw; */
+    /* float: right; */
+    /* height: 100%;
+    width: 100%; */
+    /* background-color: rgb(17, 77, 77); */
+    /* float: right; */
+    /* background-color: bisque; */
+}
+
+.form-login form {
+    padding-top: 10px;
+}
+
+.form-login input {
+    height: 3vw;
+    width: 16vw;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px;
+}
+
+.form-login input,
+::placeholder {
+    color: aqua;
+}
+
+.form-login a {
+    color: #4D4D4D;
+    font-size: 12px;
+    float: right;
+    padding: 10px 5px 30px;
+}
+
+
+.form-login button {
+    /* background-color: blue; */
+    width: 17vw;
+    height: 3.7vw;
+    border-radius: 10px;
+}
+
+.image-page-login {
+    margin: 20px;
+    /* width: 35%; */
+    width: 50%;
+    height: 95%;
+    float: left;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+
+.image-page-login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

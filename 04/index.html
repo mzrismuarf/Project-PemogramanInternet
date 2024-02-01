@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas04 - Mizar Ismu Arief</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row1">
+            <div class="box1">
+                <img class="img-box1" src="img/nike-orange1.png">
+                <h1>Diskon 75 %</h1>
+                <p>Kode promo: DSK75</p>
+            </div>
+        </div>
+        <div class="button-buy">
+            <button type="button" class="button">Beli Sekarang</button>
+        </div>
+        <div class="text1">
+            <h1>Dengan <br>Model Terbaru</h1>
+        </div>
+        <div class="row-2">
+            <div class="box2">
+                <img style="width: 90%;" src="img/nike-blue1.png">
+            </div>
+            <div class="box2">
+                <img style="width: 80%; margin-top: 60px; margin-left: 20px;" src="img/nike-blue2.png">
+            </div>
+            <div class="box2">
+                <img style="width: 100%; margin-top: 10px;" src="img/nike-blue3.png">
+            </div>
+            <div class="box2">
+                <img style="width: 100%; height: 130%;" src="img/nike-blue4.png">
+            </div>
+        </div>
+        <div class="row3">
+            <div class="slideshow-container">
+                <p class="text-box-slide">Pilih Model yang Kamu Suka</p>
+                <div class="mySlides fade">
+                    <img class="imgSlide" src="img/nike-slide-1.png" style="width:50%">
+                </div>
+                <div class="mySlides fade">
+                    <img class="imgSlide" src="img/nike-slide-2.png" style="width:50%">
+                </div>
+                <div class="mySlides fade">
+                    <img class="imgSlide" src="img/nike-slide-3.png" style="width:50%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="button-buy">
+            <button type="button" class="button">Beli Sekarang</button>
+        </div>
+        <div class="row4">
+            <div class="box4">
+                <h1>Alasan Kenapa Kamu Harus Beli<br>Sepatu NIKE</h1>
+                <ul>
+                    <ol class="list">
+                        <li>Enteng</li>
+                        <li>Empuk dan Nyaman</li>
+                        <li>Awet</li>
+                        <li>Serba Guna</li>
+                    </ol>
+                </ul>
+                <div class="container-img-box4">
+                    <img src="img/nike-end-bgwhite2.jpeg" width="100%" style="border-radius: 10%;">
+                    <!-- <img src="img/nike-end-bgwhite.jpeg" width="50%" style="border-radius: 10%;"> -->
+                </div>
+                <div style="background-color: #c4c4c4; padding-bottom: 10px;">
+                    <div class="button-buy">
+                        <button type="button" class="button">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

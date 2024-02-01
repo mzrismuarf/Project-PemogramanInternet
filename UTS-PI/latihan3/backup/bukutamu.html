@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu</title>
+    <link rel="stylesheet" href="css/bukutamu.css">
+</head>
+
+<body>
+
+    <div class="MizarIsmuArief_container">
+        <h2>Isi Buku Tamu</h2>
+        <p>Silahkan Isi Buku Tamu untuk kritik dan saran<br>terhadap website agar terus berkembang :)</p>
+        <div class="MizarIsmuArief_img-container">
+            <img class="MizarIsmuArief_img" src="images/bukutamu/Untitled (8).png" alt="">
+        </div>
+        <form id="MizarIsmuArief_guestBookForm">
+            <!-- <label for="MizarIsmuArief_nama">Nama:</label> -->
+            <input type="text" id="MizarIsmuArief_nama" name="MizarIsmuArief_nama" placeholder="Masukan Nama"
+                required><br>
+            <input type="email" id="MizarIsmuArief_email" name="MizarIsmuArief_email" placeholder="Masukan Email"
+                required><br>
+
+            <!-- <label for="MizarIsmuArief_alamat">Alamat:</label> -->
+            <input type="text" id="MizarIsmuArief_alamat" name="MizarIsmuArief_alamat" placeholder="Isi Alamat"
+                required><br>
+
+            <!-- <label for="MizarIsmuArief_telepon">Nomor Telepon/HP:</label> -->
+            <input type="tel" id="MizarIsmuArief_telepon" name="MizarIsmuArief_telepon" placeholder="Nomor HP / WA"
+                required><br>
+
+            <!-- <label for="MizarIsmuArief_pesan">Pesan:</label> -->
+            <textarea id="MizarIsmuArief_pesan" name="MizarIsmuArief_pesan" rows="4" placeholder="Pesan / Saran"
+                required></textarea><br>
+
+            <button type="button" onclick="MizarIsmuArief_kirimForm()">Kirim</button>
+        </form>
+    </div>
+
+    <div id="MizarIsmuArief_overlay"></div>
+    <div id="MizarIsmuArief_popup">
+        <div class="MizarIsmuArief_popup-content">
+            <p id="MizarIsmuArief_popupText"></p>
+            <span class="MizarIsmuArief_close-btn" onclick="MizarIsmuArief_closePopup()">Close</span>
+        </div>
+    </div>
+
+    <script>
+        function MizarIsmuArief_kirimForm() {
+            // Validasi apakah semua input sudah terisi
+            var formElements = document.getElementById("MizarIsmuArief_guestBookForm").elements;
+            var isValid = true;
+
+            for (var i = 0; i < formElements.length; i++) {
+                if (formElements[i].type !== "button" && formElements[i].value === "") {
+                    isValid = false;
+                    break;
+                }
+            }
+
+            if (isValid) {
+                // Tampilkan popup terima kasih
+                MizarIsmuArief_showPopup("Terima kasih sudah mengunjungi dan mengisi buku tamu");
+            } else {
+                // Tampilkan popup mohon isi semua form
+                MizarIsmuArief_showPopup("Mohon diisi semua form terlebih dahulu");
+            }
+        }
+
+        function MizarIsmuArief_showPopup(message) {
+            document.getElementById("MizarIsmuArief_popupText").innerHTML = message;
+            document.getElementById("MizarIsmuArief_popup").style.display = "block";
+            document.getElementById("MizarIsmuArief_overlay").style.display = "block";
+        }
+
+        function MizarIsmuArief_closePopup() {
+            document.getElementById("MizarIsmuArief_popup").style.display = "none";
+            document.getElementById("MizarIsmuArief_overlay").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

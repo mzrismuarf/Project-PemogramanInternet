@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.responsive-table {
+    overflow-x: auto;
+}
+
+/* styles.css atau dalam tag <style> di dalam elemen <head> */
+.search-form {
+    display: flex;
+    align-items: center;
+    /* Posisikan elemen secara vertikal di tengah */
+}
+
+select {
+    width: 200px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.btn-pinjamBuku {
+    /* border: 2px solid #00DFA2; */
+    /* background-color: white; */
+    background-color: #00DFA2;
+    color: white;
+}
+
+.btn-pinjamBuku:hover {
+    background-color: #04c08e;
+    color: white;
+    /* border: 2px solid #00DFA2; */
+}
+
+.btn-cari {
+    margin-left: 5px;
+}
+
+.edit-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.hapus-btn {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px 23px;
+}
+
+
+.edit-btn:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.hapus-btn:hover {
+    background-color: red;
+    color: white;
+
+}
+
+th,
+td {
+    text-align: center;
+}
+
+.td-aksi {
+    display: flex;
+    gap: 5px;
+    /* background-color: aqua; */
+}
+
+.footer-love p {
+    text-align: center;
+}
+
+.ri-heart-fill {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+
+    table,
+    th,
+    td {
+        display: block;
+    }
+
+    th,
+    td {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.hapus-btn {
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px 23px;
+}
+
+
+.edit-btn:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.hapus-btn:hover {
+    background-color: red;
+    color: white;
+
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    width: 200px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.btn-tambahPeminjam {
+    display: flex;
+}
+
+select {
+    width: 200px;
+    padding: 8px;
+    box-sizing: border-box;
+}

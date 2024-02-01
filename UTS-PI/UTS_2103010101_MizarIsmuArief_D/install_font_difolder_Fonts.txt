@@ -1,0 +1,3 @@
+Dikarenakan saya menggunakan font internal, jadi agar sesuai bisa install font terlebih dahulu di folder fonts.
+
+Terima kasih :)

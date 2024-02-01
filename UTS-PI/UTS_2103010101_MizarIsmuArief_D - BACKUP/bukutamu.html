@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu</title>
+    <link rel="stylesheet" href="css/bukutamu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/bukutamu.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="MizarIsmuArief_container">
+        <h2>Isi Buku Tamu</h2>
+        <p>Silahkan Isi Buku Tamu untuk kritik dan saran<br>terhadap website agar terus berkembang :)</p>
+        <a href="index.html"><i class="ri-home-heart-line"></i></a>
+        <div class="MizarIsmuArief_img-container">
+            <img class="MizarIsmuArief_img" src="images/bukutamu/1.png" alt="">
+        </div>
+        <form id="MizarIsmuArief_guestBookForm" action="mailto:mizarismu403@gmail.com" method="post"
+            enctype="text/plain">
+            <input type="text" id="MizarIsmuArief_nama" name="MizarIsmuArief_nama" placeholder="Masukan Nama"
+                required><br>
+            <input type="email" id="MizarIsmuArief_email" name="MizarIsmuArief_email" placeholder="Masukan Email"
+                required><br>
+
+            <input type="text" id="MizarIsmuArief_alamat" name="MizarIsmuArief_alamat" placeholder="Isi Alamat"
+                required><br>
+
+            <input type="tel" id="MizarIsmuArief_telepon" name="MizarIsmuArief_telepon" placeholder="Nomor HP / WA"
+                required><br>
+
+            <textarea id="MizarIsmuArief_pesan" name="MizarIsmuArief_pesan" rows="4" placeholder="Pesan / Saran"
+                required></textarea><br>
+            <button type="submit" id="submitButton" onclick="MizarIsmuArief_kirimForm()">Kirim</button>
+        </form>
+    </div>
+
+    <div id="MizarIsmuArief_overlay"></div>
+    <div id="MizarIsmuArief_popup">
+        <div class="MizarIsmuArief_popup-content">
+            <p id="MizarIsmuArief_popupText"></p>
+            <span class="MizarIsmuArief_close-btn" onclick="MizarIsmuArief_closePopup()">Close</span>
+        </div>
+    </div>
+</body>
+
+</html>

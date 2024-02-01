@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <!-- link javascript -->
+    <script type="text/javascript" src="js/gallery.js"></script>
+
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="MizarIsmuArief_container">
+            <h1>Image Gallery</h1>
+            <div class="MizarIsmuArief-buttons">
+                <!-- <button data-name="all" onclick="filterImages('all')">Lihat Semua</button> -->
+                <ul>
+                    <li><a style="color: #FFFEFB; cursor: pointer; font-size: 16px; background-color: #EC3030; 
+                        border-radius: 10px; height: 35px; padding-top: 5px; margin-right: 20px;"
+                            onmouseover="changeFontSize(this, '17px')" onmouseout="changeFontSize(this, '16px')"
+                            href="latihan3.html">Home</a></li>
+                    <li><button style="font-size: 16px;" data-name="all" onclick="filterImages('all')">All</button>
+                    </li>
+                    <li><a href="">Lunch</a>
+                        <ul class="dropdown">
+                            <li><button date-name="lunch1" onclick="filterImages('lunch1')">Bento Box</button></li>
+                            <li><button date-name="lunch2" onclick="filterImages('lunch2')">Salmon Lovers Roll</button>
+                            </li>
+                            <li><button date-name="lunch3" onclick="filterImages('lunch3')">Sushi Combo a</button>
+                            </li>
+                            <li><button date-name="lunch4" onclick="filterImages('lunch4')">Teriyaki Chicken
+                                    Donburi</button></li>
+                            <li><button date-name="lunch4" onclick="filterImages('lunch5')">Vegetarian Sushi
+                                    Platter</button></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Dinner</a>
+                        <ul class="dropdown">
+                            <li><button date-name="dinner1" onclick="filterImages('dinner1')">Chef's Special
+                                    Omakase</button></li>
+                            <li><button date-name="dinner2" onclick="filterImages('dinner2')">Deluxe Sashimi
+                                    Platter</button></li>
+                            <li><button date-name="dinner3" onclick="filterImages('dinner3')">Dragon Roll</button>
+                            </li>
+                            <li><button date-name="dinner4" onclick="filterImages('dinner4')">Seafood Udon</button></li>
+                            <li><button date-name="dinner5" onclick="filterImages('dinner5')">Spicy Tuna
+                                    Tartare</button></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Breakfast</a>
+                        <ul class="dropdown">
+                            <li><button date-name="breakfast1" onclick="filterImages('breakfast1')">Green Tea
+                                    Pancakes</button></li>
+                            <li><button date-name="breakfast2" onclick="filterImages('breakfast2')">Miso Soupan Onigiri
+                                    Combo</button></li>
+                            <li><button date-name="breakfast3" onclick="filterImages('breakfast3')">Sushi Breakfast
+                                    Bowl</button>
+                            </li>
+                            <li><button date-name="breakfast4" onclick="filterImages('breakfast4')">Tamago
+                                    Sushi</button></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Catering</a>
+                        <ul class="dropdown">
+                            <li><button date-name="catering1" onclick="filterImages('catering1')">Dessert Sushi</button>
+                            </li>
+                            <li><button date-name="catering2" onclick="filterImages('catering2')">Sashimi Boat</button>
+                            </li>
+                            <li><button date-name="catering3" onclick="filterImages('catering3')">Sushi
+                                    Burritos</button>
+                            </li>
+                            <li><button date-name="catering4" onclick="filterImages('catering4')">Sushi Platter</button>
+                            </li>
+                            <li><button date-name="catering5" onclick="filterImages('catering5')">Tempura Party
+                                    Platter</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="all">
+                <!-- Include all images here -->
+                <!-- lunch -->
+                <!-- 1 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/2.jpg" alt="">
+                </div>
+                <!-- 2 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/1.jpg" alt="">
+                </div>
+                <!-- 3 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SalmonLover'sRoll/1.jpg" alt="">
+                </div>
+                <!-- 4 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/TeriyakiChickenDonburi/1.jpg" alt="">
+                </div>
+                <!-- 5 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/1.jpg" alt="">
+                </div>
+                <!-- dinner -->
+                <!-- 1 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/1.jpg" alt="">
+                </div>
+                <!-- 2 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DeluxeSashimiPlatter/1.jpg" alt="">
+                </div>
+                <!-- 3 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DragonRoll/1.jpg" alt="">
+                </div>
+                <!-- 4 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SeafoodUdon/1.jpg" alt="">
+                </div>
+                <!-- 5 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SpicyTunaTartare/1.jpg" alt="">
+                </div>
+                <!-- breakfast -->
+                <!-- 1 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/GreenTeaPancakes/1.jpg" alt="">
+                </div>
+                <!-- 2 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/MisoSoupandOnigiriCombo/1.jpg" alt="">
+                </div>
+                <!-- 3 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/SushiBreakfastBowl/1.jpg" alt="">
+                </div>
+                <!-- 4 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/TamagoSushi/1.jpg" alt="">
+                </div>
+                <!-- catering -->
+                <!-- 1 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/DessertSushi/1.jpg" alt="">
+                </div>
+                <!-- 2 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SashimiBoat/1.jpg" alt="">
+                </div>
+                <!-- 3 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiBurritos/1.jpg" alt="">
+                </div>
+                <!-- 4 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiPlatter/1.jpg" alt="">
+                </div>
+                <!-- 5 -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/TempuraPartyPlatter/1.jpg" alt="">
+                </div>
+                <!-- end -->
+            </div>
+            <!-- Image Menu luch -->
+            <div class="MizarIsmuArief_image-container" data-name="lunch1">
+                <!-- Include lunch1 images here -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/4.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA//5.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/6.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SushiComboA/7.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="lunch2">
+                <!-- Include lunch2 images here -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/4.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/5.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/6.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/BentoBox/7.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="lunch3">
+                <!-- Include lunch3 images here -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SalmonLover'sRoll/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SalmonLover'sRoll/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SalmonLover'sRoll/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/SalmonLover'sRoll/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="lunch4">
+                <!-- Include lunch4 images here -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/TeriyakiChickenDonburi/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/TeriyakiChickenDonburi/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/TeriyakiChickenDonburi/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/TeriyakiChickenDonburi/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="lunch5">
+                <!-- Include lunch5 images here -->
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/VegetarianSushiPlatter/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/VegetarianSushiPlatter/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/VegetarianSushiPlatter/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Lunch/VegetarianSushiPlatter/4.jpg" alt="">
+                </div>
+            </div>
+            <!-- end image menu luch -->
+
+            <!-- Image Menu Dinner -->
+            <div class="MizarIsmuArief_image-container" data-name="dinner1">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/Chef'sSpecialOmakase/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="dinner2">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DeluxeSashimiPlatter/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DeluxeSashimiPlatter/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DeluxeSashimiPlatter/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DeluxeSashimiPlatter/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="dinner3">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DragonRoll/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DragonRoll/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DragonRoll/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/DragonRoll/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="dinner4">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SeafoodUdon/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SeafoodUdon/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SeafoodUdon/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SeafoodUdon/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="dinner5">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SpicyTunaTartare/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SpicyTunaTartare/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SpicyTunaTartare/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Dinner/SpicyTunaTartare/4.jpg" alt="">
+                </div>
+            </div>
+            <!-- End Image Menu Dinner -->
+
+            <!-- Image Menu Breakfast -->
+            <div class="MizarIsmuArief_image-container" data-name="breakfast1">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/GreenTeaPancakes/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/GreenTeaPancakes/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/GreenTeaPancakes/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/GreenTeaPancakes/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="breakfast2">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/MisoSoupandOnigiriCombo/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/MisoSoupandOnigiriCombo/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/MisoSoupandOnigiriCombo/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/MisoSoupandOnigiriCombo/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="breakfast3">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/SushiBreakfastBowl/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/SushiBreakfastBowl/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/SushiBreakfastBowl/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/SushiBreakfastBowl/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="breakfast4">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/TamagoSushi/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/TamagoSushi/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/TamagoSushi/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Breakfast/TamagoSushi/4.jpg" alt="">
+                </div>
+            </div>
+            <!-- End Image Menu Breakfast -->
+
+            <!-- Image Menu Catering -->
+            <div class="MizarIsmuArief_image-container" data-name="catering1">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/DessertSushi/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/DessertSushi/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/DessertSushi/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/DessertSushi/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="catering2">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SashimiBoat/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SashimiBoat/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SashimiBoat/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SashimiBoat/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="catering3">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiBurritos/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiBurritos/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiBurritos/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiBurritos/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="catering4">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiPlatter/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiPlatter/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiPlatter/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/SushiPlatter/4.jpg" alt="">
+                </div>
+            </div>
+            <div class="MizarIsmuArief_image-container" data-name="catering5">
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/TempuraPartyPlatter/1.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/TempuraPartyPlatter/2.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/TempuraPartyPlatter/3.jpg" alt="">
+                </div>
+                <div class="MizarIsmuArief_image"><img src="images/menu/Catering/TempuraPartyPlatter/4.jpg" alt="">
+                </div>
+            </div>
+            <!-- End Image Menu Catering -->
+            <div class="MizarIsmuArief_popup-image">
+                <span onclick="closePopup()">&times;</span>
+                <img id="popupImage" src="" alt="">
+            </div>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    // Hide all image containers except "Lihat Semua" initially
+    document.addEventListener("DOMContentLoaded", function () {
+        const containers = document.querySelectorAll('.MizarIsmuArief_image-container');
+        containers.forEach(container => {
+            if (container.getAttribute('data-name') !== 'all') {
+                container.style.display = 'none';
+            }
+        });
+    });
+
+    function filterImages(category) {
+        // Hide all image containers
+        const containers = document.querySelectorAll('.MizarIsmuArief_image-container');
+        containers.forEach(container => {
+            container.style.display = 'none';
+        });
+
+        // Show the selected category's images
+        const selectedContainer = document.querySelector(`.MizarIsmuArief_image-container[data-name="${category}"]`);
+        if (selectedContainer) {
+            selectedContainer.style.display = 'flex'; // Use flex or block based on your CSS
+        }
+    }
+
+    function closePopup() {
+        const popup = document.querySelector('.MizarIsmuArief_popup-image');
+        popup.style.display = 'none';
+    }
+    function changeFontSize(element, newSize) {
+        element.style.fontSize = newSize;
+    }
+</script>
+
+</html>

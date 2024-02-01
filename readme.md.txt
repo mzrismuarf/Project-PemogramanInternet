@@ -1,1 +1,0 @@
-minggu 1,2, dan 6 tidak ada praktikum

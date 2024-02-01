@@ -1,0 +1,35 @@
+.col {
+    margin-bottom: 20px;
+}
+
+.ri-github-fill {
+    font-size: 50px;
+}
+
+.ri-github-fill:hover {
+    font-size: 52px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col {
+        display: grid;
+        /* display: flex; */
+        /* grid-template: repeat(2, 1fr) / repeat(1, 1fr); */
+        grid-template: repeat(2, 0.5fr) / repeat(2, 0.5fr);
+        /* justify-content: center; */
+    }
+
+    h5 {
+        text-align: center;
+    }
+}
